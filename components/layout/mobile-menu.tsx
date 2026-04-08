@@ -26,7 +26,7 @@ export function MobileMenu({ links }: MobileMenuProps) {
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 top-[61px] z-40 bg-bg-primary/98 backdrop-blur-xl">
+        <div className="fixed inset-0 top-[61px] z-40 bg-bg-primary backdrop-blur-xl">
           <nav className="flex flex-col items-center justify-center gap-8 pt-24">
             {links.map((link) => (
               <Link
