@@ -1,10 +1,20 @@
 import { Section } from '@/components/ui/section';
+import { AnimateOnScroll } from '@/components/ui/animate-on-scroll';
+import { AnimatedCounter } from '@/components/ui/animated-counter';
+
+const STATS = [
+  { metric: '1M+', label: 'Indian judgments searchable via AI' },
+  { metric: '3x',  label: 'Faster legal research turnaround' },
+  { metric: '24/7', label: 'Case tracking and client portal access' },
+] as const;
 
 export function Philosophy() {
   return (
     <Section>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        <div>
+
+        {/* Text column */}
+        <AnimateOnScroll>
           <p className="text-xs tracking-[0.3em] uppercase text-text-muted mb-4">
             Why This Practice is Different
           </p>
@@ -17,19 +27,27 @@ export function Philosophy() {
           <p className="text-text-secondary leading-relaxed">
             The result: the research depth and response speed of a top-tier firm, delivered with the personal commitment of a lawyer who knows your case inside out.
           </p>
-        </div>
-        <div className="space-y-6">
-          {[
-            { metric: '1M+', label: 'Indian judgments searchable via AI' },
-            { metric: '3x', label: 'Faster legal research turnaround' },
-            { metric: '24/7', label: 'Case tracking and client portal access' },
-          ].map((stat) => (
-            <div key={stat.label} className="border-l-2 border-accent/30 pl-6 py-2">
-              <p className="font-serif text-3xl text-accent">{stat.metric}</p>
-              <p className="text-sm text-text-secondary mt-1">{stat.label}</p>
-            </div>
+        </AnimateOnScroll>
+
+        {/* Stats column with gold gradient divider on md+ */}
+        <div
+          className="space-y-6 md:border-l md:pl-12"
+          style={{
+            borderImage: 'linear-gradient(to bottom, transparent, rgba(201,168,76,0.25), transparent) 1',
+          }}
+        >
+          {STATS.map((stat, index) => (
+            <AnimateOnScroll key={stat.label} delay={index * 150}>
+              <div className="border-l-2 border-accent/30 pl-6 py-2">
+                <p className="font-serif text-3xl text-accent">
+                  <AnimatedCounter value={stat.metric} />
+                </p>
+                <p className="text-sm text-text-secondary mt-1">{stat.label}</p>
+              </div>
+            </AnimateOnScroll>
           ))}
         </div>
+
       </div>
     </Section>
   );

@@ -3,9 +3,10 @@ import { SITE } from '@/lib/constants';
 import { MobileMenu } from './mobile-menu';
 
 const NAV_LINKS = [
-  { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/practice-areas', label: 'Practice Areas' },
+  { href: '/tools', label: 'Tools' },
+  { href: '/knowledge', label: 'Knowledge' },
   { href: '/contact', label: 'Contact' },
 ] as const;
 

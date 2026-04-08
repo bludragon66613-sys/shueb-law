@@ -1,25 +1,84 @@
+'use client';
+
 import { SITE } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[90vh] flex-col items-center justify-center px-6 text-center">
+    <section className="relative flex min-h-[90vh] flex-col items-center justify-center px-6 text-center overflow-hidden">
+
+      {/* Base gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-bg-primary via-bg-primary to-bg-secondary" />
 
-      <div className="relative z-10 max-w-3xl">
+      {/* Animated gradient mesh — orb 1 */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          top: '20%',
+          left: '15%',
+          width: '45vw',
+          height: '45vw',
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%)',
+          animation: 'mesh-drift 18s ease-in-out infinite',
+          willChange: 'transform',
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Animated gradient mesh — orb 2 */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          bottom: '15%',
+          right: '10%',
+          width: '35vw',
+          height: '35vw',
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 70%)',
+          animation: 'mesh-drift-slow 24s ease-in-out infinite',
+          willChange: 'transform',
+        }}
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 max-w-4xl">
+        {/* Label */}
         <p className="mb-6 text-xs tracking-[0.3em] uppercase text-text-muted">
           {SITE.title}
         </p>
-        <h1 className="font-serif text-5xl md:text-7xl leading-[1.1] tracking-tight text-text-primary mb-6">
+
+        {/* Gold reveal line */}
+        <div className="mx-auto mb-8 h-px bg-accent opacity-60" style={{
+          width: '4rem',
+          animation: 'gold-line-reveal 1.2s ease-out forwards',
+        }} />
+
+        {/* Name — large hero treatment */}
+        <h1
+          className="font-serif text-6xl md:text-8xl leading-[1.05] tracking-tight text-text-primary mb-6"
+          style={{
+            textShadow: '0 0 80px rgba(201,168,76,0.18), 0 0 160px rgba(201,168,76,0.08)',
+          }}
+        >
           {SITE.name}
         </h1>
-        <p className="text-lg md:text-xl text-text-secondary leading-relaxed max-w-2xl mx-auto mb-4">
+
+        {/* Tagline with letter-spacing animation */}
+        <p
+          className="text-sm text-accent mb-6"
+          style={{
+            animation: 'tagline-reveal 1.4s ease-out 0.3s both',
+          }}
+        >
           {SITE.tagline}
         </p>
-        <p className="text-sm text-text-muted max-w-xl mx-auto mb-12 leading-relaxed">
+
+        <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-2xl mx-auto mb-4">
           A modern legal practice powered by AI — delivering the research depth of a top-tier firm with the personal attention of a trusted counsel.
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
           <Button href="/contact" size="lg">
             Book a Consultation
           </Button>
@@ -29,7 +88,8 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2">
+      {/* Scroll indicator */}
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2" aria-hidden="true">
         <div className="h-12 w-px bg-gradient-to-b from-transparent via-border to-transparent" />
       </div>
     </section>

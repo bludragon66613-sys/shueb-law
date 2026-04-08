@@ -35,3 +35,62 @@ html {
   background-color: var(--color-accent-muted);
   color: var(--color-accent);
 }
+
+/* ─── Gradient mesh background for Hero ──────────────────────────────────── */
+@keyframes mesh-drift {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(20px, -15px) scale(1.03); }
+  66%  { transform: translate(-15px, 20px) scale(0.97); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes mesh-drift-slow {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-25px, 18px) scale(1.05); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* ─── Gold line reveal ────────────────────────────────────────────────────── */
+@keyframes gold-line-reveal {
+  from { width: 0; opacity: 0; }
+  to   { width: 4rem; opacity: 1; }
+}
+
+/* ─── Tagline letter-spacing reveal ─────────────────────────────────────── */
+@keyframes tagline-reveal {
+  from { letter-spacing: 0.05em; opacity: 0; }
+  to   { letter-spacing: 0.4em; opacity: 1; }
+}
+
+/* ─── Subtle pulse for accent elements ──────────────────────────────────── */
+@keyframes accent-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.6; }
+}
+
+/* ─── Scroll-reveal base states ──────────────────────────────────────────── */
+.animate-on-scroll-hidden {
+  opacity: 0;
+  transform: translateY(1.5rem);
+}
+
+.animate-on-scroll-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll-hidden {
+    opacity: 1;
+    transform: none;
+  }
+  .animate-on-scroll-visible {
+    transition: none;
+  }
+  @keyframes mesh-drift       { from, to { transform: none; } }
+  @keyframes mesh-drift-slow  { from, to { transform: none; } }
+  @keyframes gold-line-reveal { from { width: 4rem; opacity: 1; } }
+  @keyframes tagline-reveal   { from { letter-spacing: 0.4em; opacity: 1; } }
+}

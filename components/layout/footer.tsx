@@ -21,6 +21,9 @@ export function Footer() {
             <div className="flex flex-col gap-3">
               <Link href="/about" className="text-sm text-text-secondary hover:text-accent transition-colors">About</Link>
               <Link href="/practice-areas" className="text-sm text-text-secondary hover:text-accent transition-colors">Practice Areas</Link>
+              <Link href="/tools" className="text-sm text-text-secondary hover:text-accent transition-colors">Legal Tools</Link>
+              <Link href="/knowledge" className="text-sm text-text-secondary hover:text-accent transition-colors">Knowledge Hub</Link>
+              <Link href="/consult" className="text-sm text-text-secondary hover:text-accent transition-colors">AI Assistant</Link>
               <Link href="/contact" className="text-sm text-text-secondary hover:text-accent transition-colors">Contact</Link>
             </div>
           </div>
