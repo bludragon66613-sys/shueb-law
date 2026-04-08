@@ -94,3 +94,33 @@ html {
   @keyframes gold-line-reveal { from { width: 4rem; opacity: 1; } }
   @keyframes tagline-reveal   { from { letter-spacing: 0.4em; opacity: 1; } }
 }
+
+/* ─── Card hover top-border reveal ──────────────────────────────────────────── */
+.card-border-reveal {
+  position: relative;
+  overflow: hidden;
+}
+.card-border-reveal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  transition: width 0.4s ease, left 0.4s ease;
+}
+.card-border-reveal:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+/* ─── Service dot pulse ──────────────────────────────────────────────────────── */
+.service-dot {
+  animation: accent-pulse 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-dot { animation: none; }
+  .card-border-reveal::before { transition: none; }
+}

@@ -32,7 +32,7 @@ export async function submitContactForm(
     message: String(message),
   };
 
-  // Send Telegram notification (non-blocking — don't fail the form if Telegram is down)
+  // Send notification (non-blocking — don't fail the form if notification service is down)
   sendTelegramNotification(submission).catch(() => {});
 
   return { success: true, error: null };

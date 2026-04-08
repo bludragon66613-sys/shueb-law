@@ -5,8 +5,25 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-bg-secondary">
+    <footer className="bg-bg-secondary">
+      {/* Gold gradient rule */}
+      <div
+        aria-hidden="true"
+        className="h-px w-full"
+        style={{
+          background:
+            'linear-gradient(90deg, transparent 0%, var(--color-accent) 50%, transparent 100%)',
+        }}
+      />
+
       <div className="mx-auto max-w-[72rem] px-6 md:px-12 py-16">
+        {/* Subtle large serif name — purely decorative */}
+        <p
+          aria-hidden="true"
+          className="font-serif text-4xl text-text-muted/20 mb-12 select-none pointer-events-none"
+        >
+          {SITE.name}
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <p className="font-serif text-xl text-text-primary mb-2">{SITE.name}</p>
@@ -32,6 +49,8 @@ export function Footer() {
             <p className="text-xs tracking-widest uppercase text-text-muted mb-4">Contact</p>
             <div className="flex flex-col gap-3 text-sm text-text-secondary">
               <a href={`mailto:${SITE.email}`} className="hover:text-accent transition-colors">{SITE.email}</a>
+              <a href={`tel:${SITE.phone}`} className="hover:text-accent transition-colors">+91 90633 63633</a>
+              <a href={SITE.social.whatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a>
               <p>{SITE.address.line1}</p>
               <p>{SITE.address.line2}</p>
             </div>
@@ -39,9 +58,11 @@ export function Footer() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-border">
-          <p className="text-xs text-text-muted leading-relaxed mb-4">
-            {SITE.barCouncil.registration}
-          </p>
+          {SITE.barCouncil.registration && (
+            <p className="text-xs text-text-muted leading-relaxed mb-4">
+              {SITE.barCouncil.registration}
+            </p>
+          )}
           <p className="text-xs text-text-muted/60 leading-relaxed">
             &copy; {currentYear} {SITE.name}. All rights reserved. This website has been designed only for the purpose of dissemination of basic information; information which is otherwise available on the internet, various public platforms and social media.
           </p>

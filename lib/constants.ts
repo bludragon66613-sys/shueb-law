@@ -3,20 +3,20 @@ export const SITE = {
   title: 'Advocate & Legal Counsel',
   tagline: 'Precision. Clarity. Justice.',
   description: 'AI-powered legal practice delivering precision, speed, and clarity across civil, criminal, corporate, and constitutional law.',
-  email: 'contact@shuebhussain.com',
-  phone: '+91-XXXXXXXXXX',
+  email: 'advocate@shueb.io',
+  phone: '+919063363633',
   address: {
-    line1: 'Office Address Line 1',
-    line2: 'City, State — PIN',
+    line1: '21-7-762/1, Ground Floor Third Shutter Masjid Lane, Opp. Post Office, Ghansi Bazaar',
+    line2: 'Opp. Gate No. 6, Highcourt, Hyderabad — 500066',
     country: 'India',
   },
   barCouncil: {
-    registration: 'Bar Council of India — Registration No. XXXXX/XXXX',
+    registration: '',
     disclaimer: 'This website is meant solely for the purpose of information and not for the purpose of advertising. Shueb Hussain & Associates does not wish to represent, warrant, or guarantee that the information contained herein is correct, complete, or updated. The contents of this website are for informational purposes only and should not be construed as solicitation or legal advice. Readers are advised not to act on any information provided herein without seeking appropriate professional advice. The use of this website does not create any lawyer-client relationship. Shueb Hussain & Associates shall not be liable for the consequences of any action taken by relying on the material/information provided on this website.',
   },
   social: {
-    telegram: 'https://t.me/shuebhussain',
-    linkedin: 'https://linkedin.com/in/shuebhussain',
+    whatsapp: 'https://wa.me/919063363633',
+    linkedin: 'https://linkedin.com/in/shueb',
   },
 } as const;
 

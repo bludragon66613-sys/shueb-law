@@ -38,14 +38,23 @@ export default function ContactPage() {
               <p className="text-text-secondary text-sm">{SITE.address.line2}</p>
             </div>
             <div>
-              <p className="text-xs tracking-widest uppercase text-text-muted mb-2">Telegram</p>
+              <p className="text-xs tracking-widest uppercase text-text-muted mb-2">Phone</p>
               <a
-                href={SITE.social.telegram}
+                href={`tel:${SITE.phone}`}
+                className="text-text-primary hover:text-accent transition-colors"
+              >
+                +91 90633 63633
+              </a>
+            </div>
+            <div>
+              <p className="text-xs tracking-widest uppercase text-text-muted mb-2">WhatsApp</p>
+              <a
+                href={SITE.social.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-text-primary hover:text-accent transition-colors"
               >
-                @shuebhussain
+                Message on WhatsApp
               </a>
             </div>
           </div>
