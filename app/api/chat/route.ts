@@ -1,5 +1,5 @@
 import { anthropic } from '@ai-sdk/anthropic';
-import { streamText } from 'ai';
+import { streamText, convertToModelMessages } from 'ai';
 
 const SYSTEM_PROMPT = `You are an AI legal intake assistant for Shueb Hussain, an Advocate enrolled with the Bar Council of India. Your role is to help potential clients understand their legal situation and prepare for a consultation.
 
@@ -28,7 +28,7 @@ You cover these practice areas:
 
 export async function POST(request: Request) {
   const body = await request.json();
-  const messages: Array<{ role: 'user' | 'assistant'; content: string }> = body.messages;
+  const { messages } = body;
 
   if (!Array.isArray(messages) || messages.length === 0) {
     return Response.json({ error: 'No messages provided.' }, { status: 400 });
@@ -44,7 +44,7 @@ export async function POST(request: Request) {
   const result = streamText({
     model: anthropic('claude-sonnet-4.6'),
     system: SYSTEM_PROMPT,
-    messages,
+    messages: convertToModelMessages(messages),
     maxOutputTokens: 1024,
   });
 
