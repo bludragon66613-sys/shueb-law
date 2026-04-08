@@ -27,7 +27,7 @@ export function PracticePreview() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {PRACTICE_AREAS.map((area: PracticeArea, index) => (
-          <AnimateOnScroll key={area.slug} delay={STAGGER_DELAYS[index] ?? 0}>
+          <AnimateOnScroll key={area.slug} delay={STAGGER_DELAYS[index] ?? 0} className="h-full">
             <Card
               title={area.title}
               description={area.shortDescription}

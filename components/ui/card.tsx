@@ -11,7 +11,7 @@ interface CardProps {
 export function Card({ title, description, href, icon, className = '' }: CardProps) {
   const content = (
     <div
-      className={`card-border-reveal group relative rounded-sm border border-border bg-bg-card p-8 transition-all duration-300 hover:border-accent/40 hover:bg-bg-elevated ${className}`}
+      className={`card-border-reveal group relative h-full rounded-sm border border-border bg-bg-card p-8 transition-all duration-300 hover:border-accent/40 hover:bg-bg-elevated ${className}`}
     >
       {icon && (
         <div className="mb-4 text-accent text-2xl w-6 h-6 flex items-center justify-center">
@@ -40,7 +40,7 @@ export function Card({ title, description, href, icon, className = '' }: CardPro
   );
 
   if (href) {
-    return <Link href={href}>{content}</Link>;
+    return <Link href={href} className="block h-full">{content}</Link>;
   }
 
   return content;
