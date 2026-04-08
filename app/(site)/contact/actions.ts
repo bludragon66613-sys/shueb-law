@@ -1,5 +1,7 @@
 'use server';
 
+import { sendTelegramNotification } from '@/lib/telegram';
+
 interface ContactFormState {
   readonly success: boolean;
   readonly error: string | null;
@@ -22,14 +24,16 @@ export async function submitContactForm(
     return { success: false, error: 'Please enter a valid email address.' };
   }
 
-  // TODO Phase 4: Send to Telegram bot / email service
-  console.log('Contact form submission:', {
+  const submission = {
     name: String(name),
     email: emailStr,
     phone: String(formData.get('phone') ?? ''),
     subject: String(formData.get('subject') ?? ''),
     message: String(message),
-  });
+  };
+
+  // Send Telegram notification (non-blocking — don't fail the form if Telegram is down)
+  sendTelegramNotification(submission).catch(() => {});
 
   return { success: true, error: null };
 }

@@ -34,8 +34,14 @@ export function Header() {
             </Link>
           ))}
           <Link
+            href="/portal"
+            className="text-sm text-text-muted hover:text-accent transition-colors duration-200"
+          >
+            Client Portal
+          </Link>
+          <Link
             href="/contact"
-            className="ml-4 rounded-sm border border-accent/50 px-5 py-2 text-sm text-accent hover:bg-accent hover:text-bg-primary transition-all duration-200"
+            className="ml-2 rounded-sm border border-accent/50 px-5 py-2 text-sm text-accent hover:bg-accent hover:text-bg-primary transition-all duration-200"
           >
             Book Consultation
           </Link>

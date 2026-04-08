@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
+    <>
     <Section className="pt-32">
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
         <div className="lg:col-span-2">
@@ -55,5 +56,37 @@ export default function ContactPage() {
         </div>
       </div>
     </Section>
+
+    {/* Cal.com booking section */}
+    <Section className="bg-bg-secondary">
+      <div className="text-center mb-8">
+        <p className="text-xs tracking-[0.3em] uppercase text-text-muted mb-4">
+          Schedule Directly
+        </p>
+        <h2 className="font-serif text-3xl text-text-primary mb-4">
+          Book a Consultation
+        </h2>
+        <p className="text-text-secondary max-w-lg mx-auto">
+          Choose a convenient time for a 30-minute initial consultation. Available slots are shown in Indian Standard Time.
+        </p>
+      </div>
+      <div className="rounded-sm border border-border bg-bg-card p-8 text-center">
+        <p className="text-text-muted text-sm mb-4">
+          Online booking will be available once the Cal.com calendar is configured.
+        </p>
+        <p className="text-xs text-text-muted/60">
+          Set <code className="text-accent/80">NEXT_PUBLIC_CALCOM_LINK</code> in environment variables to enable.
+          Example: <code className="text-accent/80">shuebhussain/consultation</code>
+        </p>
+        {process.env.NEXT_PUBLIC_CALCOM_LINK && (
+          <iframe
+            src={`https://cal.com/${process.env.NEXT_PUBLIC_CALCOM_LINK}?embed=true&theme=dark`}
+            className="w-full h-[600px] mt-6 rounded-sm border-0"
+            title="Book a consultation"
+          />
+        )}
+      </div>
+    </Section>
+  </>
   );
 }
