@@ -41,7 +41,7 @@ export function Header() {
           </Link>
           <Link
             href="/contact"
-            className="ml-2 rounded-sm border border-accent/50 px-5 py-2 text-sm text-accent hover:bg-accent hover:text-bg-primary hover:shadow-[0_0_20px_rgba(201,168,76,0.3)] transition-all transition-shadow duration-200"
+            className="ml-2 rounded-sm border border-accent/50 px-5 py-2 text-sm text-accent hover:bg-accent hover:text-bg-primary hover:shadow-[0_0_20px_rgba(201,168,76,0.3)] transition-all duration-200"
           >
             Book Consultation
           </Link>

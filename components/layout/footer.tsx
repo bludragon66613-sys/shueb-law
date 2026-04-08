@@ -50,9 +50,13 @@ export function Footer() {
             <div className="flex flex-col gap-3 text-sm text-text-secondary">
               <a href={`mailto:${SITE.email}`} className="hover:text-accent transition-colors">{SITE.email}</a>
               <a href={`tel:${SITE.phone}`} className="hover:text-accent transition-colors">+91 90633 63633</a>
-              <a href={SITE.social.whatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a>
-              <p>{SITE.address.line1}</p>
-              <p>{SITE.address.line2}</p>
+              <div className="flex gap-4">
+                <a href={SITE.social.whatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a>
+                <span className="text-border">|</span>
+                <a href={SITE.social.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">LinkedIn</a>
+              </div>
+              <p className="text-xs leading-relaxed text-text-muted">{SITE.address.line1}</p>
+              <p className="text-xs leading-relaxed text-text-muted">{SITE.address.line2}</p>
             </div>
           </div>
         </div>

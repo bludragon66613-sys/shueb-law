@@ -39,6 +39,13 @@ export function MobileMenu({ links }: MobileMenuProps) {
               </Link>
             ))}
             <Link
+              href="/portal"
+              onClick={close}
+              className="font-serif text-lg text-text-muted hover:text-accent transition-colors"
+            >
+              Client Portal
+            </Link>
+            <Link
               href="/contact"
               onClick={close}
               className="mt-4 rounded-sm border border-accent px-8 py-3 text-accent hover:bg-accent hover:text-bg-primary transition-all"
