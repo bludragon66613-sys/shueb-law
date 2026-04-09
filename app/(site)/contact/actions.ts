@@ -34,9 +34,12 @@ export async function submitContactForm(
   };
 
   // Send Resend email notification
-  if (process.env.RESEND_API_KEY) {
+  const resendKey = process.env.RESEND_API_KEY;
+  if (!resendKey) {
+    console.error('RESEND_API_KEY is not set — email will not be sent');
+  } else {
     try {
-      const resend = new Resend(process.env.RESEND_API_KEY);
+      const resend = new Resend(resendKey);
       const subject = submission.subject || 'General Enquiry';
 
       const { error: sendError } = await resend.emails.send({
