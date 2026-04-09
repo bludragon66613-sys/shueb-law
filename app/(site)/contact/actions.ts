@@ -39,7 +39,7 @@ export async function submitContactForm(
       const resend = new Resend(process.env.RESEND_API_KEY);
       const subject = submission.subject || 'General Enquiry';
 
-      await resend.emails.send({
+      const { error: sendError } = await resend.emails.send({
         from: 'shueb.io Contact Form <contact@shueb.io>',
         to: 'advocate@shueb.io',
         replyTo: submission.email,
@@ -56,7 +56,17 @@ export async function submitContactForm(
           submission.message,
         ].join('\n'),
       });
-    } catch {
+
+      if (sendError) {
+        console.error('Resend error:', sendError);
+        return {
+          success: false,
+          error:
+            'Something went wrong. Please try again or email directly at advocate@shueb.io',
+        };
+      }
+    } catch (err) {
+      console.error('Resend exception:', err);
       return {
         success: false,
         error:
