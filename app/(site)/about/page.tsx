@@ -26,6 +26,70 @@ const QUOTES = [
     text: 'Justice delayed is justice denied.',
     author: 'William E. Gladstone',
   },
+  {
+    text: 'The life of the law has not been logic; it has been experience.',
+    author: 'Oliver Wendell Holmes Jr.',
+  },
+  {
+    text: 'The Constitution is not a mere lawyers\u2019 document, it is a vehicle of life, and its spirit is always the spirit of the age.',
+    author: 'Nani Palkhivala',
+  },
+  {
+    text: 'Law and order are the medicine of the body politic and when the body politic gets sick, medicine must be administered.',
+    author: 'Dr. B.R. Ambedkar',
+  },
+  {
+    text: 'It is better that ten guilty persons escape than that one innocent suffer.',
+    author: 'William Blackstone',
+  },
+  {
+    text: 'The safety of the people shall be the highest law.',
+    author: 'Cicero — Salus populi suprema lex esto',
+  },
+  {
+    text: 'There is no greater tyranny than that which is perpetrated under the shield of the law and in the name of justice.',
+    author: 'Montesquieu',
+  },
+  {
+    text: 'The law must be stable, but it must not stand still.',
+    author: 'Roscoe Pound',
+  },
+  {
+    text: 'An unjust law is itself a species of violence. Arrest for its breach is more so.',
+    author: 'Mahatma Gandhi',
+  },
+  {
+    text: 'Equal rights for all, special privileges for none.',
+    author: 'Thomas Jefferson',
+  },
+  {
+    text: 'The power of the Constitution lies in the will of the people to defend it.',
+    author: 'Justice V.R. Krishna Iyer',
+  },
+  {
+    text: 'The proper function of a judge is to do justice between the parties before him.',
+    author: 'Lord Denning',
+  },
+  {
+    text: 'Facts are stubborn things; and whatever may be our wishes, our inclinations, or the dictates of our passions, they cannot alter the state of facts and evidence.',
+    author: 'John Adams',
+  },
+  {
+    text: 'The law is not the private property of lawyers, nor is justice the exclusive province of judges and juries.',
+    author: 'Fali S. Nariman',
+  },
+  {
+    text: 'Liberty is not the power of doing what we like, but the right of being able to do what we ought.',
+    author: 'Lord Acton',
+  },
+  {
+    text: 'Nobody has a more sacred obligation to obey the law than those who make the law.',
+    author: 'Sophocles',
+  },
+  {
+    text: 'The judge is not to innovate at pleasure but to vindicate and free the common law from misrepresentation and abuse.',
+    author: 'Sir Edward Coke',
+  },
 ] as const;
 
 export default function AboutPage() {
