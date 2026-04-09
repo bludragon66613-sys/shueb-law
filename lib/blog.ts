@@ -30,7 +30,7 @@ export function getAllBlogPosts(): BlogPost[] {
       excerpt: (data.excerpt as string) ?? '',
       category: (data.category as string) ?? '',
       readTime: (data.readTime as string) ?? '',
-      author: (data.author as string) ?? 'Shueb Hussain, B.Com., LL.B., LL.M., Ph.D.',
+      author: (data.author as string) ?? 'Shueb Hussain, Ph.D., LL.M., Dual MBA, LL.B., B.Com.',
       content: content.trim(),
     };
   });

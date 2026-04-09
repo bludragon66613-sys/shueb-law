@@ -50,8 +50,8 @@ export default function AboutPage() {
               <ul className="space-y-3 text-sm text-text-secondary">
                 <li className="border-l-2 border-accent/30 pl-4">Ph.D.</li>
                 <li className="border-l-2 border-accent/30 pl-4">LL.M. (Constitutional Law)</li>
+                <li className="border-l-2 border-accent/30 pl-4">Dual MBA (Management &amp; Systems)</li>
                 <li className="border-l-2 border-accent/30 pl-4">LL.B.</li>
-                <li className="border-l-2 border-accent/30 pl-4">Dual Masters (Management &amp; Systems)</li>
                 <li className="border-l-2 border-accent/30 pl-4">B.Com. (Computers)</li>
                 <li className="border-l-2 border-accent/30 pl-4">Bar Council of India — Enrolled Advocate</li>
                 <li className="border-l-2 border-accent/30 pl-4">Practice across Supreme Court, High Courts, and Tribunals</li>

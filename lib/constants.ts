@@ -1,7 +1,7 @@
 export const SITE = {
   name: 'Shueb Hussain',
-  qualifications: 'B.Com., LL.B., LL.M., Ph.D.',
-  qualificationsLong: 'B.Com. (Computers), LL.B., LL.M. (Constitutional Law), Dual Masters (Management & Systems), Ph.D.',
+  qualifications: 'Ph.D., LL.M., Dual MBA, LL.B., B.Com.',
+  qualificationsLong: 'Ph.D., LL.M. (Constitutional Law), Dual MBA (Management & Systems), LL.B., B.Com. (Computers)',
   title: 'Advocate & Legal Counsel',
   tagline: 'Precision. Clarity. Justice.',
   description: 'AI-powered legal practice delivering precision, speed, and clarity across civil, criminal, corporate, and constitutional law.',
