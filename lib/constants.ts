@@ -4,7 +4,7 @@ export const SITE = {
   qualificationsLong: 'Ph.D., LL.M. (Constitutional Law), Dual MBA (Management & Systems), LL.B., B.Com. (Computers)',
   title: 'Advocate & Legal Counsel',
   tagline: 'Precision. Clarity. Justice.',
-  description: 'AI-powered legal practice delivering precision, speed, and clarity across civil, criminal, corporate, and constitutional law.',
+  description: 'Multidisciplinary legal practice delivering precision, depth, and clarity across civil, criminal, corporate, and constitutional law.',
   email: 'advocate@shueb.io',
   phone: '+919063363633',
   address: {

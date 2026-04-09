@@ -74,7 +74,7 @@ export function Hero() {
         </p>
 
         <p className="hero-entrance hero-entrance-delay-3 text-base md:text-lg text-text-secondary leading-relaxed max-w-2xl mx-auto mb-4">
-          A modern legal practice powered by AI — delivering the research depth of a top-tier firm with the personal attention of a trusted counsel.
+          Five degrees across law, business, and technology. Six practice areas. One advocate who sees what most legal teams need three specialists to find.
         </p>
 
         <div className="hero-entrance hero-entrance-delay-4 mt-14 max-w-3xl mx-auto">
