@@ -3,7 +3,7 @@ import { SITE } from '@/lib/constants';
 import { Section } from '@/components/ui/section';
 import { Button } from '@/components/ui/button';
 import { AnimateOnScroll } from '@/components/ui/animate-on-scroll';
-import { LLB_SUBJECTS, LLM_SUBJECTS, AIBE_GUIDE, COURT_PRACTICE } from '@/lib/resources';
+import { LLB_SUBJECTS, LLM_SUBJECTS, AIBE_GUIDE, COURT_PRACTICE, AIBE_SYLLABUS, OU_LLM_BRANCHES, TS_LAWCET, TS_PGLCET } from '@/lib/resources';
 
 export const metadata: Metadata = {
   title: `Student Resources | ${SITE.name}`,
@@ -249,6 +249,212 @@ export default function ResourcesPage() {
             </AnimateOnScroll>
           ))}
         </div>
+      </Section>
+
+      {/* AIBE-XX Official Syllabus */}
+      <Section className="bg-bg-secondary">
+        <AnimateOnScroll>
+          <p className="text-xs tracking-[0.3em] uppercase text-text-muted mb-4">
+            AIBE Syllabus
+          </p>
+          <h2 className="font-serif text-2xl md:text-3xl text-text-primary mb-2">
+            AIBE-XX Official Syllabus
+          </h2>
+          <p className="text-text-secondary max-w-2xl mb-2">
+            All India Bar Examination — 100 MCQs, Open Book, 3.5 Hours
+          </p>
+          <p className="text-xs text-text-muted mb-12">
+            Source: {AIBE_SYLLABUS.source}, dated {AIBE_SYLLABUS.date}
+          </p>
+        </AnimateOnScroll>
+
+        <div className="rounded-sm border border-border overflow-hidden">
+          {AIBE_SYLLABUS.subjects.map((subject, i) => (
+            <AnimateOnScroll key={subject.name} delay={i * 40}>
+              <div className={`flex items-center justify-between gap-4 px-6 py-4 ${i % 2 === 0 ? 'bg-bg-card' : 'bg-bg-secondary'} border-b border-border last:border-b-0`}>
+                <span className="text-sm text-text-primary">{subject.name}</span>
+                <span className="shrink-0 rounded-sm bg-accent/10 border border-accent/30 text-accent text-xs font-medium px-3 py-1 tracking-wide">
+                  {subject.questions} Qs
+                </span>
+              </div>
+            </AnimateOnScroll>
+          ))}
+        </div>
+      </Section>
+
+      {/* Osmania University LL.M. Branches */}
+      <Section>
+        <AnimateOnScroll>
+          <p className="text-xs tracking-[0.3em] uppercase text-text-muted mb-4">
+            LL.M. Programme
+          </p>
+          <h2 className="font-serif text-2xl md:text-3xl text-text-primary mb-2">
+            Osmania University — LL.M. Specialisations
+          </h2>
+          <p className="text-text-secondary max-w-2xl mb-12">
+            {OU_LLM_BRANCHES.duration} &middot; {OU_LLM_BRANCHES.totalMarks} Total Marks &middot; {OU_LLM_BRANCHES.revision}
+          </p>
+        </AnimateOnScroll>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {OU_LLM_BRANCHES.branches.map((branch, i) => (
+            <AnimateOnScroll key={branch.number} delay={i * 60} className="h-full">
+              <div className="rounded-sm border border-border bg-bg-card p-8 h-full card-border-reveal">
+                <div className="flex items-start gap-4 mb-4">
+                  <span className="shrink-0 font-serif text-accent text-sm tracking-widest uppercase">
+                    Branch {branch.number}
+                  </span>
+                </div>
+                <h3 className="font-serif text-xl text-text-primary mb-4">
+                  {branch.name}
+                </h3>
+                <p className="text-xs tracking-widest uppercase text-text-muted mb-3">
+                  Papers
+                </p>
+                <ul className="space-y-2">
+                  {branch.papers.map((paper) => (
+                    <li key={paper} className="flex items-start gap-2 text-sm text-text-secondary">
+                      <span className="mt-1.5 block h-1.5 w-1.5 rounded-full bg-accent/40 shrink-0" />
+                      {paper}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </AnimateOnScroll>
+          ))}
+        </div>
+      </Section>
+
+      {/* TS LAWCET 2026 */}
+      <Section className="bg-bg-secondary">
+        <AnimateOnScroll>
+          <p className="text-xs tracking-[0.3em] uppercase text-text-muted mb-4">
+            Entrance Examination
+          </p>
+          <h2 className="font-serif text-2xl md:text-3xl text-text-primary mb-2">
+            TS LAWCET 2026
+          </h2>
+          <p className="text-text-secondary max-w-2xl mb-4">
+            Telangana State Law Common Entrance Test — LL.B. 3-Year &amp; 5-Year
+          </p>
+          <div className="flex flex-wrap gap-4 mb-12">
+            <span className="text-xs text-accent border border-accent/30 rounded-sm px-3 py-1">
+              {TS_LAWCET.totalQuestions} Questions
+            </span>
+            <span className="text-xs text-accent border border-accent/30 rounded-sm px-3 py-1">
+              {TS_LAWCET.totalMarks} Marks
+            </span>
+            <span className="text-xs text-accent border border-accent/30 rounded-sm px-3 py-1">
+              {TS_LAWCET.duration}
+            </span>
+          </div>
+        </AnimateOnScroll>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          {TS_LAWCET.parts.map((part, i) => (
+            <AnimateOnScroll key={part.name} delay={i * 100}>
+              <div className="rounded-sm border border-border bg-bg-card p-6 h-full">
+                <h3 className="font-serif text-base text-text-primary mb-2">
+                  {part.name}
+                </h3>
+                <div className="flex gap-3 mb-4">
+                  <span className="text-xs text-accent">{part.questions} questions</span>
+                  <span className="text-xs text-text-muted">/</span>
+                  <span className="text-xs text-accent">{part.marks} marks</span>
+                </div>
+                <p className="text-xs tracking-widest uppercase text-text-muted mb-3">
+                  Topics
+                </p>
+                <ul className="space-y-2">
+                  {part.topics.map((topic) => (
+                    <li key={topic} className="flex items-start gap-2 text-sm text-text-secondary">
+                      <span className="mt-1.5 block h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+                      {topic}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </AnimateOnScroll>
+          ))}
+        </div>
+
+        <AnimateOnScroll delay={300}>
+          <p className="text-xs text-text-muted border-l-2 border-accent/30 pl-4">
+            {TS_LAWCET.note}
+          </p>
+        </AnimateOnScroll>
+      </Section>
+
+      {/* TS PGLCET 2026 */}
+      <Section>
+        <AnimateOnScroll>
+          <p className="text-xs tracking-[0.3em] uppercase text-text-muted mb-4">
+            Postgraduate Entrance
+          </p>
+          <h2 className="font-serif text-2xl md:text-3xl text-text-primary mb-2">
+            TS PGLCET 2026
+          </h2>
+          <p className="text-text-secondary max-w-2xl mb-4">
+            Postgraduate Law Common Entrance Test — LL.M. Entrance
+          </p>
+          <div className="flex flex-wrap gap-4 mb-12">
+            <span className="text-xs text-accent border border-accent/30 rounded-sm px-3 py-1">
+              {TS_PGLCET.totalQuestions} Questions
+            </span>
+            <span className="text-xs text-accent border border-accent/30 rounded-sm px-3 py-1">
+              {TS_PGLCET.totalMarks} Marks
+            </span>
+            <span className="text-xs text-accent border border-accent/30 rounded-sm px-3 py-1">
+              {TS_PGLCET.duration}
+            </span>
+          </div>
+        </AnimateOnScroll>
+
+        {TS_PGLCET.parts.map((part, partIndex) => (
+          <div key={part.name} className={partIndex > 0 ? 'mt-12' : ''}>
+            <AnimateOnScroll>
+              <div className="flex items-center gap-4 mb-6">
+                <h3 className="font-serif text-xl text-text-primary">{part.name}</h3>
+                <div className="flex gap-3">
+                  <span className="text-xs text-accent border border-accent/30 rounded-sm px-3 py-1">
+                    {part.questions} questions
+                  </span>
+                  <span className="text-xs text-accent border border-accent/30 rounded-sm px-3 py-1">
+                    {part.marks} marks
+                  </span>
+                </div>
+              </div>
+            </AnimateOnScroll>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {part.sections.map((section, i) => (
+                <AnimateOnScroll key={section.name} delay={i * 80}>
+                  <div className="rounded-sm border border-border bg-bg-card p-6 h-full card-border-reveal">
+                    <div className="flex items-start justify-between gap-4 mb-4">
+                      <h4 className="font-serif text-base text-text-primary">
+                        {section.name}
+                      </h4>
+                      <span className="shrink-0 text-xs text-accent border border-accent/30 rounded-sm px-2 py-1">
+                        {section.questions} Qs
+                      </span>
+                    </div>
+                    <p className="text-xs tracking-widest uppercase text-text-muted mb-3">
+                      Topics
+                    </p>
+                    <ul className="space-y-2">
+                      {section.topics.map((topic) => (
+                        <li key={topic} className="flex items-start gap-2 text-sm text-text-secondary">
+                          <span className="mt-1.5 block h-1.5 w-1.5 rounded-full bg-accent/40 shrink-0" />
+                          {topic}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </AnimateOnScroll>
+              ))}
+            </div>
+          </div>
+        ))}
       </Section>
 
       {/* CTA */}
