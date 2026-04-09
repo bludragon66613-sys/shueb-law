@@ -44,7 +44,7 @@ export async function submitContactForm(
 
       const { error: sendError } = await resend.emails.send({
         from: 'shueb.io Contact Form <contact@shueb.io>',
-        to: 'advocate@shueb.io',
+        to: 'contact@shueb.io',
         replyTo: submission.email,
         subject: `New Enquiry: ${subject} — shueb.io`,
         text: [
