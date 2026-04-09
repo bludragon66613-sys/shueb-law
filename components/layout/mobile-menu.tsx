@@ -90,7 +90,7 @@ export function MobileMenu({ links }: MobileMenuProps) {
       : null;
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <button
         onClick={toggle}
         className="flex flex-col gap-1.5 p-2"
