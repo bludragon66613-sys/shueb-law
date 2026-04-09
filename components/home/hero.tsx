@@ -1,7 +1,6 @@
 'use client';
 
 import { SITE } from '@/lib/constants';
-import { Button } from '@/components/ui/button';
 
 export function Hero() {
   return (
@@ -78,13 +77,44 @@ export function Hero() {
           A modern legal practice powered by AI — delivering the research depth of a top-tier firm with the personal attention of a trusted counsel.
         </p>
 
-        <div className="hero-entrance hero-entrance-delay-4 flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
-          <Button href="/contact" size="lg">
-            Book a Consultation
-          </Button>
-          <Button href="/practice-areas" variant="secondary" size="lg">
-            Practice Areas
-          </Button>
+        <div className="hero-entrance hero-entrance-delay-4 mt-14 max-w-3xl mx-auto">
+          <p className="text-xs tracking-[0.3em] uppercase text-accent mb-6 text-center">
+            Know Your Rights
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-3 text-left">
+            <div className="flex items-start gap-2">
+              <span className="mt-1.5 block h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+              <p className="text-sm text-text-secondary"><span className="text-text-primary">Right to Equality</span> — Equal protection before law; no discrimination on grounds of religion, race, caste, sex, or place of birth (Articles 14-18)</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="mt-1.5 block h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+              <p className="text-sm text-text-secondary"><span className="text-text-primary">Right to Freedom</span> — Speech, assembly, movement, residence, and profession; protection of life and personal liberty (Articles 19-22)</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="mt-1.5 block h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+              <p className="text-sm text-text-secondary"><span className="text-text-primary">Right Against Exploitation</span> — Prohibition of forced labour, child labour, and human trafficking (Articles 23-24)</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="mt-1.5 block h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+              <p className="text-sm text-text-secondary"><span className="text-text-primary">Right to Freedom of Religion</span> — Freedom of conscience, practice, and propagation of religion (Articles 25-28)</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="mt-1.5 block h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+              <p className="text-sm text-text-secondary"><span className="text-text-primary">Cultural &amp; Educational Rights</span> — Protection of language, script, and culture; minorities may establish educational institutions (Articles 29-30)</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="mt-1.5 block h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+              <p className="text-sm text-text-secondary"><span className="text-text-primary">Right to Constitutional Remedies</span> — Right to approach the Supreme Court or High Courts for enforcement of fundamental rights (Article 32)</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="mt-1.5 block h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+              <p className="text-sm text-text-secondary"><span className="text-text-primary">Right to Property</span> — No person shall be deprived of property save by authority of law (Article 300A)</p>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="mt-1.5 block h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+              <p className="text-sm text-text-secondary"><span className="text-text-primary">Right to Life &amp; Liberty</span> — No person shall be deprived of life or personal liberty except by procedure established by law (Article 21)</p>
+            </div>
+          </div>
         </div>
       </div>
 
