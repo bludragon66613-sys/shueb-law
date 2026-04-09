@@ -6,7 +6,7 @@ import { AnimateOnScroll } from '@/components/ui/animate-on-scroll';
 
 export const metadata: Metadata = {
   title: `About | ${SITE.name}`,
-  description: `Learn about ${SITE.name} — credentials, practice philosophy, and approach to AI-powered legal counsel.`,
+  description: `Learn about ${SITE.name}, his credentials, practice philosophy, and approach to legal counsel.`,
 };
 
 const QUOTES = [
@@ -106,7 +106,7 @@ export default function AboutPage() {
             {SITE.qualificationsLong}
           </p>
           <p className="text-lg text-text-secondary leading-relaxed max-w-2xl">
-            {SITE.title} — combining deep legal expertise with cutting-edge AI technology to deliver exceptional results for every client.
+            Five degrees across law, business, and technology. Six practice areas. One advocate who sees what most legal teams need three specialists to find.
           </p>
         </AnimateOnScroll>
       </Section>
@@ -118,13 +118,13 @@ export default function AboutPage() {
           <AnimateOnScroll className="md:col-span-2 space-y-6">
             <h2 className="font-serif text-2xl text-text-primary">Background</h2>
             <p className="text-text-secondary leading-relaxed">
-              Shueb Hussain is a practicing Advocate enrolled with the Bar Council of India, bringing an exceptionally rare combination of academic depth and courtroom experience to every engagement. With a practice spanning criminal law, civil litigation, corporate advisory, constitutional law, family matters, and technology law, he offers a truly multidisciplinary perspective that few practitioners can match.
+              Shueb Hussain is a practicing Advocate enrolled with the Bar Council of India. He brings a rare combination of academic depth and courtroom experience across criminal law, civil litigation, corporate advisory, constitutional law, family matters, and technology law. Most advocates specialise in one or two areas. He built a practice around the belief that real legal problems rarely fit inside a single category.
             </p>
             <p className="text-text-secondary leading-relaxed">
-              His academic foundation is equally formidable. A doctorate (Ph.D.) demonstrates his commitment to the deepest levels of legal scholarship. His LL.M. in Constitutional Law provides specialised mastery over the foundational framework of Indian governance — the rights, remedies, and structural principles that underpin every area of law. A Dual MBA in Management and Systems equips him with a business acumen that is indispensable in corporate and commercial matters, allowing him to advise clients not just on legal compliance but on strategic outcomes. His LL.B. and B.Com. in Computers complete a profile that bridges law, business, and technology in a way that is increasingly vital in the modern legal landscape.
+              His academic record speaks for itself. A doctorate (Ph.D.) reflecting a commitment to serious legal scholarship. An LL.M. in Constitutional Law providing specialised command over the rights, remedies, and structural principles that form the backbone of Indian governance. A Dual MBA in Management and Systems that lets him advise corporate clients on strategic outcomes, not just legal compliance. And a B.Com. in Computers that gives him genuine fluency in technology matters at a time when most lawyers are still catching up.
             </p>
             <p className="text-text-secondary leading-relaxed">
-              His practice stands at the forefront of legal technology adoption in India — leveraging AI-powered research tools, automated document analysis, and intelligent case management systems to deliver results that match the depth and speed of large institutional firms. This is not technology for its own sake; it is technology deployed in service of better legal outcomes.
+              What sets this practice apart is not size but precision. Every matter receives the rigour of thorough research, methodical preparation, and the kind of cross-disciplinary thinking that comes from genuinely understanding law, commerce, and technology as connected disciplines rather than separate silos.
             </p>
           </AnimateOnScroll>
 
@@ -194,7 +194,7 @@ export default function AboutPage() {
             <div className="rounded-sm border border-border bg-bg-card p-8 h-full card-border-reveal">
               <p className="font-serif text-lg text-text-primary mb-3">Constitutional Depth</p>
               <p className="text-sm text-text-secondary leading-relaxed">
-                An LL.M. in Constitutional Law means your advocate doesn&apos;t just cite precedents — he understands the foundational principles behind them. When fundamental rights are at stake, this depth is the difference between a good argument and a winning one.
+                An LL.M. in Constitutional Law means your advocate doesn&apos;t just cite precedents. He understands the foundational principles behind them. When fundamental rights are at stake, this depth is the difference between a good argument and a winning one.
               </p>
             </div>
           </AnimateOnScroll>
@@ -202,7 +202,7 @@ export default function AboutPage() {
             <div className="rounded-sm border border-border bg-bg-card p-8 h-full card-border-reveal">
               <p className="font-serif text-lg text-text-primary mb-3">Business Acumen</p>
               <p className="text-sm text-text-secondary leading-relaxed">
-                A Dual MBA in Management and Systems means corporate clients receive counsel that understands P&amp;L statements, organisational structures, and operational risk — not just legal provisions. Legal advice that ignores commercial reality is advice that fails.
+                A Dual MBA in Management and Systems means corporate clients receive counsel that understands P&amp;L statements, organisational structures, and operational risk. Not just legal provisions. Legal advice that ignores commercial reality is advice that fails.
               </p>
             </div>
           </AnimateOnScroll>
@@ -210,7 +210,7 @@ export default function AboutPage() {
             <div className="rounded-sm border border-border bg-bg-card p-8 h-full card-border-reveal">
               <p className="font-serif text-lg text-text-primary mb-3">Technology Fluency</p>
               <p className="text-sm text-text-secondary leading-relaxed">
-                A B.Com. in Computers combined with AI-powered practice tools means this is not an advocate who outsources technology questions. Cybercrime, data protection, and digital commerce matters are handled with genuine technical understanding.
+                A B.Com. in Computers means this is not an advocate who outsources technology questions. Cybercrime, data protection, and digital commerce matters are handled with genuine technical understanding, not second-hand advice.
               </p>
             </div>
           </AnimateOnScroll>
@@ -234,19 +234,19 @@ export default function AboutPage() {
               <div>
                 <h3 className="font-serif text-xl text-text-primary mb-3">Access to Justice</h3>
                 <p className="text-text-secondary leading-relaxed">
-                  The law is fundamentally about access to justice. Technology should lower barriers, not raise them. Every AI tool in this practice exists to serve one purpose: ensuring that no argument goes unresearched, no deadline is missed, and no client feels like a number.
+                  The law exists to protect people, not to confuse them. This practice is built around making sure no argument goes unresearched, no deadline is missed, and no client ever feels like a number.
                 </p>
               </div>
               <div>
                 <h3 className="font-serif text-xl text-text-primary mb-3">Candour Over Comfort</h3>
                 <p className="text-text-secondary leading-relaxed">
-                  Clients deserve honest assessments, not reassuring fictions. If a case is weak, we say so — and we explain why, what the alternatives are, and what the realistic outcomes look like. Trust is built on truth, not on telling people what they want to hear.
+                  Clients deserve honest assessments, not reassuring fictions. If a case is weak, you will hear it from us first, along with why, what the alternatives are, and what realistic outcomes look like. Trust is built on truth, not on telling people what they want to hear.
                 </p>
               </div>
               <div>
                 <h3 className="font-serif text-xl text-text-primary mb-3">Preparation Wins Cases</h3>
                 <p className="text-text-secondary leading-relaxed">
-                  Courtroom theatrics are overrated. What wins cases is relentless preparation — knowing the law better, knowing the facts better, and anticipating every argument the other side will make before they make it. AI-powered research is our force multiplier, but the discipline of preparation is irreplaceable.
+                  Courtroom theatrics are overrated. What wins cases is relentless preparation: knowing the law better, knowing the facts better, and anticipating every argument the other side will make before they make it.
                 </p>
               </div>
             </div>
@@ -257,19 +257,19 @@ export default function AboutPage() {
               <div>
                 <h3 className="font-serif text-xl text-text-primary mb-3">Efficiency Is a Duty</h3>
                 <p className="text-text-secondary leading-relaxed">
-                  Legal matters drain time, money, and emotional energy. We have a professional obligation to resolve matters as efficiently as possible — through mediation when appropriate, through decisive litigation when necessary, and never through delay for its own sake.
+                  Legal matters drain time, money, and emotional energy. We have a professional obligation to resolve matters as efficiently as possible. Mediation when appropriate, decisive litigation when necessary, and never delay for its own sake.
                 </p>
               </div>
               <div>
                 <h3 className="font-serif text-xl text-text-primary mb-3">Confidentiality Is Absolute</h3>
                 <p className="text-text-secondary leading-relaxed">
-                  Every communication, every document, every detail of your matter is held in the strictest confidence. This is not just an ethical obligation — it is the foundation of the advocate-client relationship. Without absolute trust, effective representation is impossible.
+                  Every communication, every document, every detail of your matter is held in the strictest confidence. This is not just an ethical obligation. It is the foundation of the advocate-client relationship. Without absolute trust, effective representation is impossible.
                 </p>
               </div>
               <div>
                 <h3 className="font-serif text-xl text-text-primary mb-3">Continuous Learning</h3>
                 <p className="text-text-secondary leading-relaxed">
-                  The law evolves constantly — new statutes, new judgments, new technology, new challenges. A Ph.D. is not the end of scholarship; it is a commitment to the habit of deep inquiry. This practice stays current because its founder never stopped being a student.
+                  The law evolves constantly. New statutes, new judgments, new challenges. A Ph.D. is not the end of scholarship; it is a commitment to the habit of deep inquiry. This practice stays current because its founder never stopped being a student.
                 </p>
               </div>
             </div>
@@ -315,7 +315,7 @@ export default function AboutPage() {
             Ready to discuss your matter?
           </h2>
           <p className="text-text-secondary mb-8 max-w-lg mx-auto">
-            Schedule a consultation to understand how AI-powered legal counsel can make a difference in your case.
+            Every matter deserves an advocate who has done the homework. Let&apos;s discuss yours.
           </p>
           <Button href="/contact" size="lg">
             Book a Consultation
