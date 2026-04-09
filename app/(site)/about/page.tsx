@@ -15,9 +15,12 @@ export default function AboutPage() {
       <Section className="pt-32">
         <AnimateOnScroll>
           <p className="text-xs tracking-[0.3em] uppercase text-text-muted mb-4">About</p>
-          <h1 className="font-serif text-4xl md:text-5xl text-text-primary mb-8">
+          <h1 className="font-serif text-4xl md:text-5xl text-text-primary mb-3">
             {SITE.name}
           </h1>
+          <p className="text-sm text-accent mb-8">
+            {SITE.qualificationsLong}
+          </p>
           <p className="text-lg text-text-secondary leading-relaxed max-w-2xl">
             {SITE.title} — combining deep legal expertise with cutting-edge AI technology to deliver exceptional results for every client.
           </p>
@@ -45,9 +48,13 @@ export default function AboutPage() {
             <div>
               <p className="text-xs tracking-[0.3em] uppercase text-text-muted mb-3">Credentials</p>
               <ul className="space-y-3 text-sm text-text-secondary">
+                <li className="border-l-2 border-accent/30 pl-4">Ph.D.</li>
+                <li className="border-l-2 border-accent/30 pl-4">LL.M. (Constitutional Law)</li>
+                <li className="border-l-2 border-accent/30 pl-4">LL.B.</li>
+                <li className="border-l-2 border-accent/30 pl-4">Dual Masters (Management &amp; Systems)</li>
+                <li className="border-l-2 border-accent/30 pl-4">B.Com. (Computers)</li>
                 <li className="border-l-2 border-accent/30 pl-4">Bar Council of India — Enrolled Advocate</li>
                 <li className="border-l-2 border-accent/30 pl-4">Practice across Supreme Court, High Courts, and Tribunals</li>
-                <li className="border-l-2 border-accent/30 pl-4">Specialist in BNS/BNSS transition advisory</li>
               </ul>
             </div>
             <div>

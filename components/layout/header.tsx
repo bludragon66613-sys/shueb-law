@@ -19,6 +19,9 @@ export function Header() {
           <span className="font-serif text-xl text-text-primary tracking-tight">
             {SITE.name}
           </span>
+          <span className="text-[10px] text-text-muted tracking-wide">
+            {SITE.qualifications}
+          </span>
           <span className="text-xs text-text-muted tracking-widest uppercase">
             Advocate
           </span>

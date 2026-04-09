@@ -12,8 +12,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://shueb.io'),
   title: {
-    default: 'Shueb Hussain | Advocate & Legal Counsel',
-    template: '%s | Shueb Hussain',
+    default: 'Shueb Hussain, B.Com., LL.B., LL.M., Ph.D. | Advocate & Legal Counsel',
+    template: '%s | Shueb Hussain, Advocate',
   },
   description: 'AI-powered legal practice in Hyderabad delivering precision, speed, and clarity across criminal, civil, corporate, constitutional, family, and technology law.',
   keywords: [
@@ -22,19 +22,19 @@ export const metadata: Metadata = {
     'corporate lawyer hyderabad', 'family lawyer hyderabad',
     'Shueb Hussain', 'legal consultation hyderabad',
   ],
-  authors: [{ name: 'Shueb Hussain' }],
+  authors: [{ name: 'Shueb Hussain, B.Com., LL.B., LL.M., Ph.D.' }],
   creator: 'Shueb Hussain',
   openGraph: {
-    title: 'Shueb Hussain | Advocate & Legal Counsel',
+    title: 'Shueb Hussain, B.Com., LL.B., LL.M., Ph.D. | Advocate & Legal Counsel',
     description: 'AI-powered legal practice in Hyderabad — criminal, civil, corporate, constitutional, family, and technology law.',
     url: 'https://shueb.io',
-    siteName: 'Shueb Hussain — Advocate',
+    siteName: 'Shueb Hussain — Advocate & Legal Counsel',
     locale: 'en_IN',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shueb Hussain | Advocate & Legal Counsel',
+    title: 'Shueb Hussain, B.Com., LL.B., LL.M., Ph.D. | Advocate & Legal Counsel',
     description: 'AI-powered legal practice in Hyderabad delivering precision, speed, and clarity.',
   },
   robots: {
@@ -50,7 +50,7 @@ function LegalPracticeJsonLd() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
-    name: 'Shueb Hussain — Advocate & Legal Counsel',
+    name: 'Shueb Hussain, B.Com., LL.B., LL.M., Ph.D. — Advocate & Legal Counsel',
     description: 'AI-powered legal practice delivering precision, speed, and clarity across criminal, civil, corporate, constitutional, family, and technology law.',
     url: 'https://shueb.io',
     telephone: '+919063363633',

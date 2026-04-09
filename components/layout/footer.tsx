@@ -26,7 +26,8 @@ export function Footer() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
-            <p className="font-serif text-xl text-text-primary mb-2">{SITE.name}</p>
+            <p className="font-serif text-xl text-text-primary mb-1">{SITE.name}</p>
+            <p className="text-xs text-text-muted mb-1">{SITE.qualifications}</p>
             <p className="text-sm text-text-muted">{SITE.title}</p>
             <p className="mt-4 text-sm text-text-secondary leading-relaxed">
               {SITE.tagline}
