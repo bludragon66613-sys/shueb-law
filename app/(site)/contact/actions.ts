@@ -40,7 +40,7 @@ export async function submitContactForm(
       const subject = submission.subject || 'General Enquiry';
 
       await resend.emails.send({
-        from: 'shueb.io Contact Form <onboarding@resend.dev>',
+        from: 'shueb.io Contact Form <contact@shueb.io>',
         to: 'advocate@shueb.io',
         replyTo: submission.email,
         subject: `New Enquiry: ${subject} — shueb.io`,
