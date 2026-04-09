@@ -38,7 +38,8 @@ export function MobileMenu({ links }: MobileMenuProps) {
 
       {isOpen && (
         <div
-          className="fixed inset-0 z-[1000] bg-bg-primary"
+          className="fixed inset-0 z-[1000]"
+          style={{ backgroundColor: '#0a0a0b' }}
           aria-modal="true"
           role="dialog"
         >
