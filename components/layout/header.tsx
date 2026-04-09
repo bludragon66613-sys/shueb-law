@@ -16,15 +16,12 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-bg-primary/80 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-[72rem] items-center justify-between px-6 md:px-12 py-4">
-        <Link href="/" className="flex flex-col">
+        <Link href="/" className="flex flex-col shrink-0">
           <span className="font-serif text-xl text-text-primary tracking-tight">
             {SITE.name}
           </span>
-          <span className="text-[10px] text-text-muted tracking-wide">
-            {SITE.qualifications}
-          </span>
-          <span className="text-xs text-text-muted tracking-widest uppercase">
-            Advocate
+          <span className="text-[10px] text-text-muted tracking-widest uppercase">
+            Advocate &middot; Ph.D., LL.M., Dual MBA
           </span>
         </Link>
 
