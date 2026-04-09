@@ -33,11 +33,19 @@ export async function submitContactForm(
     message: String(message),
   };
 
-  // Send Resend email notification
+  // Send Telegram notification (primary — must succeed)
+  try {
+    const telegramSent = await sendTelegramNotification(submission);
+    if (!telegramSent) {
+      console.error('Telegram notification failed or not configured');
+    }
+  } catch (err) {
+    console.error('Telegram exception:', err);
+  }
+
+  // Send Resend email notification (secondary — best effort)
   const resendKey = process.env.RESEND_API_KEY;
-  if (!resendKey) {
-    console.error('RESEND_API_KEY is not set — email will not be sent');
-  } else {
+  if (resendKey) {
     try {
       const resend = new Resend(resendKey);
       const subject = submission.subject || 'General Enquiry';
@@ -62,24 +70,11 @@ export async function submitContactForm(
 
       if (sendError) {
         console.error('Resend error:', sendError);
-        return {
-          success: false,
-          error:
-            'Something went wrong. Please try again or email directly at advocate@shueb.io',
-        };
       }
     } catch (err) {
       console.error('Resend exception:', err);
-      return {
-        success: false,
-        error:
-          'Something went wrong. Please try again or email directly at advocate@shueb.io',
-      };
     }
   }
-
-  // Send Telegram notification (non-blocking — don't fail the form if Telegram is down)
-  sendTelegramNotification(submission).catch(() => {});
 
   return { success: true, error: null };
 }
