@@ -1,47 +1,91 @@
 export const LLB_SUBJECTS = [
   {
-    title: "Constitutional Law I & II",
-    semester: "Sem 3-4",
+    title: "Law of Contracts",
+    semester: "Sem 1",
     description:
-      "Constitutional Law forms the bedrock of the Indian legal system, covering the structure of government, fundamental rights, directive principles, and the amendment procedure. It examines the relationship between the three organs of state — legislature, executive, and judiciary — and the limits each places on the other. The course traces the evolution of Indian constitutionalism through landmark Supreme Court decisions that have reshaped the constitutional landscape.",
+      "The Indian Contract Act, 1872 governs the formation, performance, and breach of contracts and remains one of the most commercially significant statutes in India. The subject covers essentials of a valid contract, capacity, free consent, consideration, void and voidable agreements, quasi-contracts, and remedies for breach. Understanding contract law is foundational to corporate transactions, consumer protection, and commercial dispute resolution.",
     landmarks: [
       {
-        name: "Kesavananda Bharati v State of Kerala",
-        citation: "(1973) 4 SCC 225",
+        name: "Mohori Bibee v Dharmodas Ghose",
+        citation: "(1903) 30 IA 114",
         principle:
-          "Established the Basic Structure doctrine, holding that Parliament cannot amend the Constitution in a manner that destroys its basic or essential features.",
+          "Held that a contract entered into by a minor is void ab initio and not merely voidable, establishing that no restitution can be ordered against a minor even if the consideration was obtained by fraud.",
       },
       {
-        name: "Maneka Gandhi v Union of India",
-        citation: "AIR 1978 SC 597",
+        name: "Lalman Shukla v Gauri Dutt",
+        citation: "(1913) 11 ALJ 489",
         principle:
-          "Expanded the scope of Article 21 by reading it with Articles 14 and 19, requiring that any procedure depriving personal liberty must be fair, just, and reasonable.",
+          "Ruled that an offer of reward must be communicated to the offeree before performance; Lalman, unaware of the reward for finding the missing boy, could not claim it as he lacked knowledge of the offer.",
       },
       {
-        name: "Minerva Mills Ltd v Union of India",
-        citation: "(1980) 3 SCC 625",
+        name: "Carlill v Carbolic Smoke Ball Company",
+        citation: "[1893] 1 QB 256",
         principle:
-          "Reaffirmed the Basic Structure doctrine and struck down clauses of the 42nd Amendment that had given Parliament unlimited power to amend Fundamental Rights.",
+          "Established that a general offer to the world at large can be accepted by conduct, and advertisement of a reward constitutes a binding offer that ripens into a contract upon performance.",
       },
       {
-        name: "Golaknath v State of Punjab",
-        citation: "AIR 1967 SC 1643",
+        name: "Hadley v Baxendale",
+        citation: "(1854) 9 Exch 341",
         principle:
-          "Held that Fundamental Rights are beyond the amending power of Parliament under Article 368, a position later overruled but which triggered the Basic Structure doctrine debate.",
+          "Established the foundational rule for remoteness of damages in contract — recoverable damages are limited to those that were in the reasonable contemplation of the parties at the time of contracting.",
       },
     ] as const,
     topics: [
-      "Preamble and its justiciability",
-      "Fundamental Rights (Articles 12–35)",
-      "Directive Principles of State Policy",
-      "Amendment procedure under Article 368",
-      "Basic Structure doctrine",
-      "Separation of powers and checks and balances",
-      "Judicial review and writ jurisdiction",
-      "Emergency provisions (Articles 352, 356, 360)",
+      "Offer, acceptance, and communication",
+      "Consideration and privity of contract",
+      "Capacity and minor's agreements",
+      "Free consent — coercion, undue influence, fraud, misrepresentation, mistake",
+      "Void and voidable agreements under Sections 23–30",
+      "Performance and breach of contract",
+      "Remedies — damages, specific performance, injunction, quantum meruit",
+      "Quasi-contracts and restitutionary obligations",
     ] as const,
     scope:
-      "Constitutional Law is indispensable for every branch of legal practice — litigators invoke fundamental rights in High Courts and the Supreme Court, while corporate lawyers navigate regulatory frameworks built on constitutional powers. Public-interest litigation (PIL) has transformed this subject into a tool for social change, making constitutional advocacy one of the most prestigious areas of Indian legal practice. Understanding constitutional principles is also critical for competitive examinations such as the civil services and judicial services.",
+      "Contract law permeates every area of legal practice — employment contracts, sale agreements, insurance policies, licensing arrangements, and technology agreements are all governed by contract principles. Corporate lawyers draft and negotiate complex multi-party agreements, while litigators enforce and resist contractual claims. The rise of e-contracts, smart contracts, and consumer contracts in the digital economy has expanded the practical scope of this subject significantly in recent years.",
+  },
+  {
+    title: "Law of Torts",
+    semester: "Sem 1",
+    description:
+      "Tort law is the law of civil wrongs — it provides remedies to individuals whose legal rights have been infringed by the acts or omissions of others. Unlike criminal law, tort law is primarily compensatory, aiming to restore the injured party to their pre-tort position. India has no codified tort statute, making case law the primary source, and the subject draws heavily on English common law and evolving Indian jurisprudence.",
+    landmarks: [
+      {
+        name: "MC Mehta v Union of India",
+        citation: "AIR 1987 SC 1086",
+        principle:
+          "Evolved the doctrine of absolute liability, holding that enterprises engaged in hazardous activities are absolutely liable for harm caused without any exceptions, departing from the English rule of strict liability in Rylands v Fletcher.",
+      },
+      {
+        name: "Donoghue v Stevenson",
+        citation: "[1932] AC 562",
+        principle:
+          "Established the modern law of negligence by articulating the neighbour principle — one must take reasonable care to avoid acts or omissions that one can reasonably foresee would injure one's neighbour.",
+      },
+      {
+        name: "Rylands v Fletcher",
+        citation: "(1868) LR 3 HL 330",
+        principle:
+          "Established the rule of strict liability — a person who brings onto their land something likely to do mischief if it escapes is prima facie liable for all damage that naturally flows from the escape.",
+      },
+      {
+        name: "Bhim Singh v State of Jammu & Kashmir",
+        citation: "AIR 1986 SC 494",
+        principle:
+          "Recognised the tort of wrongful arrest and detention by the state and awarded exemplary damages, holding that the Supreme Court can award compensation in writ proceedings under Article 32.",
+      },
+    ] as const,
+    topics: [
+      "General principles — damnum sine injuria, injuria sine damnum",
+      "Negligence — duty, breach, causation, and remoteness",
+      "Nuisance — public and private nuisance",
+      "Strict and absolute liability",
+      "Defamation — libel and slander",
+      "Trespass to person, land, and goods",
+      "Vicarious liability and liability of the state",
+      "Defences — volenti non fit injuria, contributory negligence, act of God",
+    ] as const,
+    scope:
+      "Tort law is the primary vehicle for compensating victims of accidents, medical negligence, defamation, environmental harm, and consumer product liability. With the rise of the Motor Vehicles Act and the Consumer Protection Act, tortious claims have been statutorily codified, but the common-law framework remains essential for novel cases. Environmental lawyers, personal injury litigators, and media lawyers rely heavily on tort principles, and the doctrine of absolute liability has particular relevance for industrial accident litigation.",
   },
   {
     title: "Criminal Law — BNS/IPC",
@@ -132,6 +176,50 @@ export const LLB_SUBJECTS = [
       "Criminal procedure is the operational spine of criminal justice practice. Every criminal lawyer must master the stages of a criminal case — from FIR to final appeal — to advise clients effectively on strategy, bail, and timelines. The BNSS introduces mandatory timelines and technology-based hearings, making this knowledge essential for modern criminal practice. Judicial officers, magistrates, and police officers are equally governed by procedural rules that attorneys can use to check executive overreach.",
   },
   {
+    title: "Constitutional Law I & II",
+    semester: "Sem 3-4",
+    description:
+      "Constitutional Law forms the bedrock of the Indian legal system, covering the structure of government, fundamental rights, directive principles, and the amendment procedure. It examines the relationship between the three organs of state — legislature, executive, and judiciary — and the limits each places on the other. The course traces the evolution of Indian constitutionalism through landmark Supreme Court decisions that have reshaped the constitutional landscape.",
+    landmarks: [
+      {
+        name: "Kesavananda Bharati v State of Kerala",
+        citation: "(1973) 4 SCC 225",
+        principle:
+          "Established the Basic Structure doctrine, holding that Parliament cannot amend the Constitution in a manner that destroys its basic or essential features.",
+      },
+      {
+        name: "Maneka Gandhi v Union of India",
+        citation: "AIR 1978 SC 597",
+        principle:
+          "Expanded the scope of Article 21 by reading it with Articles 14 and 19, requiring that any procedure depriving personal liberty must be fair, just, and reasonable.",
+      },
+      {
+        name: "Minerva Mills Ltd v Union of India",
+        citation: "(1980) 3 SCC 625",
+        principle:
+          "Reaffirmed the Basic Structure doctrine and struck down clauses of the 42nd Amendment that had given Parliament unlimited power to amend Fundamental Rights.",
+      },
+      {
+        name: "Golaknath v State of Punjab",
+        citation: "AIR 1967 SC 1643",
+        principle:
+          "Held that Fundamental Rights are beyond the amending power of Parliament under Article 368, a position later overruled but which triggered the Basic Structure doctrine debate.",
+      },
+    ] as const,
+    topics: [
+      "Preamble and its justiciability",
+      "Fundamental Rights (Articles 12–35)",
+      "Directive Principles of State Policy",
+      "Amendment procedure under Article 368",
+      "Basic Structure doctrine",
+      "Separation of powers and checks and balances",
+      "Judicial review and writ jurisdiction",
+      "Emergency provisions (Articles 352, 356, 360)",
+    ] as const,
+    scope:
+      "Constitutional Law is indispensable for every branch of legal practice — litigators invoke fundamental rights in High Courts and the Supreme Court, while corporate lawyers navigate regulatory frameworks built on constitutional powers. Public-interest litigation (PIL) has transformed this subject into a tool for social change, making constitutional advocacy one of the most prestigious areas of Indian legal practice. Understanding constitutional principles is also critical for competitive examinations such as the civil services and judicial services.",
+  },
+  {
     title: "Law of Evidence — BSA",
     semester: "Sem 4",
     description:
@@ -218,94 +306,6 @@ export const LLB_SUBJECTS = [
     ] as const,
     scope:
       "Civil procedure is the framework within which all civil litigation unfolds — property disputes, contractual claims, matrimonial suits, and succession matters all proceed under CPC norms. Mastery of pleadings and interim injunctions is essential for litigation lawyers, while understanding execution proceedings is critical for debt recovery and enforcement work. The CPC's interaction with specialist codes such as the Specific Relief Act, Limitation Act, and Commercial Courts Act makes it a foundational subject for civil practice.",
-  },
-  {
-    title: "Law of Contracts",
-    semester: "Sem 1",
-    description:
-      "The Indian Contract Act, 1872 governs the formation, performance, and breach of contracts and remains one of the most commercially significant statutes in India. The subject covers essentials of a valid contract, capacity, free consent, consideration, void and voidable agreements, quasi-contracts, and remedies for breach. Understanding contract law is foundational to corporate transactions, consumer protection, and commercial dispute resolution.",
-    landmarks: [
-      {
-        name: "Mohori Bibee v Dharmodas Ghose",
-        citation: "(1903) 30 IA 114",
-        principle:
-          "Held that a contract entered into by a minor is void ab initio and not merely voidable, establishing that no restitution can be ordered against a minor even if the consideration was obtained by fraud.",
-      },
-      {
-        name: "Lalman Shukla v Gauri Dutt",
-        citation: "(1913) 11 ALJ 489",
-        principle:
-          "Ruled that an offer of reward must be communicated to the offeree before performance; Lalman, unaware of the reward for finding the missing boy, could not claim it as he lacked knowledge of the offer.",
-      },
-      {
-        name: "Carlill v Carbolic Smoke Ball Company",
-        citation: "[1893] 1 QB 256",
-        principle:
-          "Established that a general offer to the world at large can be accepted by conduct, and advertisement of a reward constitutes a binding offer that ripens into a contract upon performance.",
-      },
-      {
-        name: "Hadley v Baxendale",
-        citation: "(1854) 9 Exch 341",
-        principle:
-          "Established the foundational rule for remoteness of damages in contract — recoverable damages are limited to those that were in the reasonable contemplation of the parties at the time of contracting.",
-      },
-    ] as const,
-    topics: [
-      "Offer, acceptance, and communication",
-      "Consideration and privity of contract",
-      "Capacity and minor's agreements",
-      "Free consent — coercion, undue influence, fraud, misrepresentation, mistake",
-      "Void and voidable agreements under Sections 23–30",
-      "Performance and breach of contract",
-      "Remedies — damages, specific performance, injunction, quantum meruit",
-      "Quasi-contracts and restitutionary obligations",
-    ] as const,
-    scope:
-      "Contract law permeates every area of legal practice — employment contracts, sale agreements, insurance policies, licensing arrangements, and technology agreements are all governed by contract principles. Corporate lawyers draft and negotiate complex multi-party agreements, while litigators enforce and resist contractual claims. The rise of e-contracts, smart contracts, and consumer contracts in the digital economy has expanded the practical scope of this subject significantly in recent years.",
-  },
-  {
-    title: "Law of Torts",
-    semester: "Sem 1",
-    description:
-      "Tort law is the law of civil wrongs — it provides remedies to individuals whose legal rights have been infringed by the acts or omissions of others. Unlike criminal law, tort law is primarily compensatory, aiming to restore the injured party to their pre-tort position. India has no codified tort statute, making case law the primary source, and the subject draws heavily on English common law and evolving Indian jurisprudence.",
-    landmarks: [
-      {
-        name: "MC Mehta v Union of India",
-        citation: "AIR 1987 SC 1086",
-        principle:
-          "Evolved the doctrine of absolute liability, holding that enterprises engaged in hazardous activities are absolutely liable for harm caused without any exceptions, departing from the English rule of strict liability in Rylands v Fletcher.",
-      },
-      {
-        name: "Donoghue v Stevenson",
-        citation: "[1932] AC 562",
-        principle:
-          "Established the modern law of negligence by articulating the neighbour principle — one must take reasonable care to avoid acts or omissions that one can reasonably foresee would injure one's neighbour.",
-      },
-      {
-        name: "Rylands v Fletcher",
-        citation: "(1868) LR 3 HL 330",
-        principle:
-          "Established the rule of strict liability — a person who brings onto their land something likely to do mischief if it escapes is prima facie liable for all damage that naturally flows from the escape.",
-      },
-      {
-        name: "Bhim Singh v State of Jammu & Kashmir",
-        citation: "AIR 1986 SC 494",
-        principle:
-          "Recognised the tort of wrongful arrest and detention by the state and awarded exemplary damages, holding that the Supreme Court can award compensation in writ proceedings under Article 32.",
-      },
-    ] as const,
-    topics: [
-      "General principles — damnum sine injuria, injuria sine damnum",
-      "Negligence — duty, breach, causation, and remoteness",
-      "Nuisance — public and private nuisance",
-      "Strict and absolute liability",
-      "Defamation — libel and slander",
-      "Trespass to person, land, and goods",
-      "Vicarious liability and liability of the state",
-      "Defences — volenti non fit injuria, contributory negligence, act of God",
-    ] as const,
-    scope:
-      "Tort law is the primary vehicle for compensating victims of accidents, medical negligence, defamation, environmental harm, and consumer product liability. With the rise of the Motor Vehicles Act and the Consumer Protection Act, tortious claims have been statutorily codified, but the common-law framework remains essential for novel cases. Environmental lawyers, personal injury litigators, and media lawyers rely heavily on tort principles, and the doctrine of absolute liability has particular relevance for industrial accident litigation.",
   },
   {
     title: "Family Law — Hindu Law",

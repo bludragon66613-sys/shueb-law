@@ -26,8 +26,8 @@ function SubjectCard({
   readonly delay: number;
 }) {
   return (
-    <AnimateOnScroll delay={delay}>
-      <div className="rounded-sm border border-border bg-bg-card p-8 card-border-reveal">
+    <AnimateOnScroll delay={delay} className="h-full">
+      <div className="rounded-sm border border-border bg-bg-card p-8 h-full card-border-reveal">
         <div className="flex items-start justify-between gap-4 mb-4">
           <h3 className="font-serif text-xl text-text-primary">
             {subject.title}
