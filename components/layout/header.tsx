@@ -7,7 +7,6 @@ const NAV_LINKS = [
   { href: '/practice-areas', label: 'Practice Areas' },
   { href: '/tools', label: 'Tools' },
   { href: '/knowledge', label: 'Knowledge' },
-  { href: '/contact', label: 'Contact' },
   { href: '/blog', label: 'Blog' },
   { href: '/resources', label: 'Resources' },
 ] as const;
