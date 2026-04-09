@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { href: '/knowledge', label: 'Knowledge' },
   { href: '/blog', label: 'Blog' },
   { href: '/resources', label: 'Resources' },
+  { href: '/thesis', label: 'Thesis' },
 ] as const;
 
 export function Header() {
