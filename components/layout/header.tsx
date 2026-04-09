@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { href: '/knowledge', label: 'Knowledge' },
   { href: '/contact', label: 'Contact' },
   { href: '/blog', label: 'Blog' },
+  { href: '/resources', label: 'Resources' },
 ] as const;
 
 export function Header() {
