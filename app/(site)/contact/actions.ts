@@ -1,5 +1,6 @@
 'use server';
 
+import { Resend } from 'resend';
 import { sendTelegramNotification } from '@/lib/telegram';
 
 interface ContactFormState {
@@ -32,7 +33,39 @@ export async function submitContactForm(
     message: String(message),
   };
 
-  // Send notification (non-blocking — don't fail the form if notification service is down)
+  // Send Resend email notification
+  if (process.env.RESEND_API_KEY) {
+    try {
+      const resend = new Resend(process.env.RESEND_API_KEY);
+      const subject = submission.subject || 'General Enquiry';
+
+      await resend.emails.send({
+        from: 'shueb.io Contact Form <onboarding@resend.dev>',
+        to: 'advocate@shueb.io',
+        replyTo: submission.email,
+        subject: `New Enquiry: ${subject} — shueb.io`,
+        text: [
+          'New client enquiry received via shueb.io',
+          '',
+          `Name: ${submission.name}`,
+          `Email: ${submission.email}`,
+          `Phone: ${submission.phone || 'Not provided'}`,
+          `Subject: ${subject}`,
+          '',
+          'Matter:',
+          submission.message,
+        ].join('\n'),
+      });
+    } catch {
+      return {
+        success: false,
+        error:
+          'Something went wrong. Please try again or email directly at advocate@shueb.io',
+      };
+    }
+  }
+
+  // Send Telegram notification (non-blocking — don't fail the form if Telegram is down)
   sendTelegramNotification(submission).catch(() => {});
 
   return { success: true, error: null };
