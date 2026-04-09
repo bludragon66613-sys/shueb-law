@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 
 interface MobileMenuProps {
@@ -13,11 +13,22 @@ export function MobileMenu({ links }: MobileMenuProps) {
   const toggle = useCallback(() => setIsOpen((prev) => !prev), []);
   const close = useCallback(() => setIsOpen(false), []);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   return (
     <div className="md:hidden">
       <button
         onClick={toggle}
-        className="flex flex-col gap-1.5 p-2"
+        className="relative z-[1001] flex flex-col gap-1.5 p-2"
         aria-label={isOpen ? 'Close menu' : 'Open menu'}
         aria-expanded={isOpen}
       >
@@ -26,8 +37,12 @@ export function MobileMenu({ links }: MobileMenuProps) {
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 top-[61px] z-40 bg-bg-primary backdrop-blur-xl">
-          <nav className="flex flex-col items-center justify-center gap-8 pt-24">
+        <div
+          className="fixed inset-0 z-[1000] bg-bg-primary"
+          aria-modal="true"
+          role="dialog"
+        >
+          <nav className="flex h-full flex-col items-center justify-center gap-8">
             {links.map((link) => (
               <Link
                 key={link.href}

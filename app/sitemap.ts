@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { PRACTICE_AREAS } from '@/lib/constants';
 import { ARTICLES } from '@/lib/articles';
+import { getAllBlogPosts } from '@/lib/blog';
 
 const BASE_URL = 'https://shueb.io';
 
@@ -15,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/tools/bnss-converter`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/tools/bsa-converter`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/knowledge`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${BASE_URL}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE_URL}/consult`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
   ];
 
@@ -32,5 +34,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...practiceAreaPages, ...articlePages];
+  const blogPages: MetadataRoute.Sitemap = getAllBlogPosts().map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: 'yearly' as const,
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...practiceAreaPages, ...articlePages, ...blogPages];
 }
