@@ -34,6 +34,7 @@ export default async function PracticeAreaPage({
 
   return (
     <>
+      {/* Hero */}
       <Section className="pt-32">
         <AnimateOnScroll>
           <Button href="/practice-areas" variant="ghost" className="mb-8">
@@ -51,23 +52,103 @@ export default async function PracticeAreaPage({
         </AnimateOnScroll>
       </Section>
 
+      {/* Our Approach */}
       <Section className="bg-bg-secondary">
         <AnimateOnScroll>
-          <h2 className="font-serif text-2xl text-text-primary mb-8">Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {area.services.map((service, index) => (
-              <AnimateOnScroll key={service} delay={index * 60}>
-                <div className="flex items-start gap-3 rounded-sm border border-border bg-bg-card p-5">
-                  <span className="service-dot mt-1 block h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
-                  <p className="text-sm text-text-secondary">{service}</p>
-                </div>
-              </AnimateOnScroll>
-            ))}
-          </div>
+          <p className="text-xs tracking-[0.3em] uppercase text-text-muted mb-4">
+            Our Approach
+          </p>
+          <h2 className="font-serif text-2xl md:text-3xl text-text-primary mb-6">
+            How We Think About {area.title}
+          </h2>
+          <p className="text-text-secondary leading-relaxed max-w-3xl">
+            {area.approach}
+          </p>
         </AnimateOnScroll>
       </Section>
 
+      {/* How We Work — Process Steps */}
       <Section>
+        <AnimateOnScroll>
+          <p className="text-xs tracking-[0.3em] uppercase text-text-muted mb-4">
+            How We Work
+          </p>
+          <h2 className="font-serif text-2xl md:text-3xl text-text-primary mb-12">
+            From First Call to Resolution
+          </h2>
+        </AnimateOnScroll>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {area.process.map((step, index) => (
+            <AnimateOnScroll key={step.step} delay={index * 100}>
+              <div className="relative rounded-sm border border-border bg-bg-card p-8 h-full card-border-reveal">
+                <span className="font-serif text-4xl text-accent/20 absolute top-6 right-8">
+                  {step.step}
+                </span>
+                <h3 className="font-serif text-xl text-text-primary mb-3 pr-12">
+                  {step.title}
+                </h3>
+                <p className="text-sm text-text-secondary leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            </AnimateOnScroll>
+          ))}
+        </div>
+      </Section>
+
+      {/* Services */}
+      <Section className="bg-bg-secondary">
+        <AnimateOnScroll>
+          <p className="text-xs tracking-[0.3em] uppercase text-text-muted mb-4">
+            What We Handle
+          </p>
+          <h2 className="font-serif text-2xl md:text-3xl text-text-primary mb-8">
+            Services
+          </h2>
+        </AnimateOnScroll>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {area.services.map((service, index) => (
+            <AnimateOnScroll key={service} delay={index * 60}>
+              <div className="flex items-start gap-3 rounded-sm border border-border bg-bg-card p-5">
+                <span className="service-dot mt-1 block h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+                <p className="text-sm text-text-secondary">{service}</p>
+              </div>
+            </AnimateOnScroll>
+          ))}
+        </div>
+      </Section>
+
+      {/* Why Choose Us */}
+      <Section>
+        <AnimateOnScroll>
+          <p className="text-xs tracking-[0.3em] uppercase text-text-muted mb-4">
+            Why Choose Us
+          </p>
+          <h2 className="font-serif text-2xl md:text-3xl text-text-primary mb-8">
+            What Sets Us Apart
+          </h2>
+        </AnimateOnScroll>
+
+        <div className="space-y-4">
+          {area.strengths.map((strength, index) => (
+            <AnimateOnScroll key={strength} delay={index * 80}>
+              <div className="flex items-start gap-4 rounded-sm border border-border bg-bg-card p-6">
+                <span className="mt-0.5 block h-5 w-5 shrink-0 rounded-full border border-accent/40 flex items-center justify-center">
+                  <span className="block h-1.5 w-1.5 rounded-full bg-accent" />
+                </span>
+                <p className="text-text-secondary leading-relaxed">
+                  {strength}
+                </p>
+              </div>
+            </AnimateOnScroll>
+          ))}
+        </div>
+      </Section>
+
+      {/* CTA */}
+      <Section className="bg-bg-secondary">
         <AnimateOnScroll>
           <div className="text-center">
             <h2 className="font-serif text-3xl text-text-primary mb-4">
